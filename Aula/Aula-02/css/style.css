@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 2em;
+  background: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.demo-box {
+  height: 200px;
+  border-radius: 8px;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.solid-color {
+  background-color: #ff0000;
+}
+
+.rgba-color {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.bg-image {
+  background-image: url('../imagens/backgroud.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-repeat {
+  background-image: url('../imagens/backgroud.jpg');
+  background-size: 50px;
+  background-repeat: repeat;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, blue, red);
+}
+
+.bg-radial {
+  background: radial-gradient(circle, blue, red);
+}
+
+.bg-conic {
+  background: conic-gradient(from 45deg, blue, red);
+}
+
+.multiple-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../imagens/backgroud.jpg');
+}

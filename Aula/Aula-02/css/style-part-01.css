@@ -1,0 +1,133 @@
+body {
+  font-family: system-ui;
+  max-width: 800px;
+  margin: 0;
+  padding: 20px;
+
+}
+
+/* Seletores Basicos */
+
+.section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+  background: #f0f0f0;
+  text-align: center;
+}
+
+[data-type="special"] {
+  color: purple;
+}
+
+
+/* Combinações */
+
+div {
+
+  & span {
+    background: red;
+  }
+  > span {
+    border-bottom: 2px solid black;
+  }
+
+
+}
+
+
+h3 {
+  
+  + p {
+    font-weight: bold;
+  }
+  ~ p {
+    font-style: italic;
+  }
+  
+}
+
+
+
+
+/* Pseudo-classes */
+
+.sectionSelecionada {
+  background: rgba(255, 0, 0, 0.614);
+}
+
+button {
+    &:hover {
+      background: green;
+      color: white;
+    } 
+  
+}
+
+input {
+  &:focus {
+    outline: 2px solid yellow;
+  }
+}
+
+li {
+  &:first-child {
+    color: rgb(58, 24, 207);
+    font-weight: bold;
+  }
+
+  &:nth-child(2n){
+    background: blue;
+  }
+
+}
+
+.items {
+  & :not(.special) {
+    text-decoration: line-through;
+  }
+}
+
+
+/* pseudo-elementos */
+
+.intro {
+  &::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: yellow;
+  }
+}
+
+.quote {
+  &::before {
+    content: '“';
+    color: turquoise;
+    font-size: 1.5em;
+  }
+  &::after {
+    content: '”';
+    color: turquoise;
+    font-size: 1.5em;
+  }
+}
+
+/* form styles */
+
+input {
+  &:invalid {
+    border-color: red;
+  }
+  &:valid {
+    border-color: green;
+  }
+}
+
+#email {
+  outline: 1px;
+}
