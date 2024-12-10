@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 2em;
+  background: #f0f0f0;
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.section {
+  background: yellow;
+  padding: 1.5rem;;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.transition-box {
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+    &:hover{
+      transform: scale(1.2) rotate(45deg);
+      background: #2196f3;
+    }
+
+}
+
+
+@keyframes bouce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-50px);}
+}
+
+.keyframe-box {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  border-radius: 8px;
+  animation: bouce 2s ease-in-out infinite;
+}
+
+.transform-container {
+  perspective: 1000px;
+}
+
+.transform-box {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  border-radius: 8px;
+  transition: transform 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotateY(180deg) scale(1.2)
+  }
+}
+
+@keyframes moveALongPath {
+  0% {offset-distance: 0%;}
+  100% {offset-distance: 100%;}
+}
+
+.motion-path-box{
+  width: 50px;
+  height: 50px;
+  background: blue;
+  border-radius: 8px;
+  offset-path: path('M20, 20 C20,100 200,0 200,100');
+  offset-rotate: auto;
+  animation: moveALongPath 3s infinite;
+}
+
+.scroll-box{
+  width: 100px;
+  height: 100px;
+  background: magenta;
+  border-radius: 8px;
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.web-api-box {
+  width: 100px;
+  height: 100px;
+  background: rgb(6, 135, 23);
+  border-radius: 8px;
+  
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1976d2;
+  }
+
+}
+
+.path {
+  stroke: #ccc;
+  stroke-width: 2;
+  fill: none;
+}
