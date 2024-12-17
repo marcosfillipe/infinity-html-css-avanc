@@ -1,0 +1,47 @@
+body {
+  position: relative;
+}
+
+.container {
+border: 1px solid black;
+padding: 20px;
+z-index: 1;
+}
+
+.item {
+padding: 8px;
+margin: 8px;
+height: fit-content;
+}
+
+.t {
+width: 60px;
+height: 60px;
+color: white;
+background-color: black;
+}
+
+.d {
+width: 60px;
+height: 60px;
+background-color: transparent;
+position: sticky;
+top: 10px;
+z-index: 1;
+}
+
+.mae {
+position: sticky;
+top: 0;
+}
+.d2 {
+padding: 8px;
+width: 60px;
+height: 60px;
+color: white;
+background-color: rgb(255, 0, 0);
+position: relative;
+top: 189px;
+left: 28px;
+z-index: 2;
+}
