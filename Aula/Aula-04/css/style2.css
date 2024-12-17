@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #343434;
+}
+
+.coracao {
+  width: 300px;
+  height: 300px;
+  mask-image: url('../assets/mask/teste2-svg.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  object-fit: cover;
+}
+
