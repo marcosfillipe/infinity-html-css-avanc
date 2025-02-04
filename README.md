@@ -1,4 +1,4 @@
-Material do curso de HTML e CSS Avançado na Infinity School
+## Material do curso de HTML e CSS Avançado na Infinity School
 
 Neste repositorio vai ficar armazenado todo o conteudo do curso junto com as atividades.
 
