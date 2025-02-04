@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0e0e0, #ffffff);
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 0 30px 30px 0; /* Inverted border radius */
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+                        -8px -8px 15px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+                        -10px -10px 20px rgba(255, 255, 255, 0.6);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(30deg);
+        }
+
+        .card .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+        }
+
+        .card .content h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card .content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card .button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+                        inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .card .button:hover {
+            background: #fff;
+            transform: translateY(-5px);
+        }
+
+        .card .button:active {
+            transform: translateY(2px);
+        }
+
+        .card .button::before {
+            content: '✨';
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <h1>Modern Card</h1>
+            <p>This card showcases the best of newmorphism, glasmorphism, and creative designs with inverted border radius.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
